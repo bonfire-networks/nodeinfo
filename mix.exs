@@ -18,10 +18,7 @@ defmodule Nodeinfo.MixProject do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [
-      mod: {Nodeinfo.Application, []},
-      extra_applications: [:logger, :runtime_tools]
-    ]
+    []
   end
 
   # Specifies which paths to compile per environment.
@@ -36,8 +33,6 @@ defmodule Nodeinfo.MixProject do
       {:phoenix, "~> 1.5.4"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_live_dashboard, "~> 0.2"},
-      {:telemetry_metrics, "~> 0.4"},
-      {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"}

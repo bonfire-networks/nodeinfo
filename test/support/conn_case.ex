@@ -25,19 +25,10 @@ defmodule NodeinfoWeb.ConnCase do
       import NodeinfoWeb.ConnCase
 
       alias NodeinfoWeb.Router.Helpers, as: Routes
-
-      # The default endpoint for testing
-      @endpoint NodeinfoWeb.Endpoint
     end
   end
 
-  setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Nodeinfo.Repo)
-
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Nodeinfo.Repo, {:shared, self()})
-    end
-
+  setup _tags do
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 end
