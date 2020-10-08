@@ -48,5 +48,5 @@ defmodule NodeinfoWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug NodeinfoWeb.Router
+  # plug NodeinfoWeb.Router
 end
