@@ -7,8 +7,6 @@ defmodule Nodeinfo.Application do
 
   def start(_type, _args) do
     children = [
-      # Start the Ecto repository
-      Nodeinfo.Repo,
       # Start the Telemetry supervisor
       NodeinfoWeb.Telemetry,
       # Start the PubSub system
