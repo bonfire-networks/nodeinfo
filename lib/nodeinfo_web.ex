@@ -22,7 +22,6 @@ defmodule NodeinfoWeb do
       use Phoenix.Controller, namespace: NodeinfoWeb
 
       import Plug.Conn
-      import NodeinfoWeb.Gettext
       alias NodeinfoWeb.Router.Helpers, as: Routes
     end
   end
