@@ -1,4 +1,4 @@
-defmodule Nodeinfo.Apater do
+defmodule Nodeinfo.Adapter do
   @moduledoc """
   Contract for Nodeinfo module adapters
   """
