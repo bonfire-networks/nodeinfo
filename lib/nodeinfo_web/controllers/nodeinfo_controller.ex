@@ -19,12 +19,6 @@ defmodule NodeinfoWeb.NodeinfoController do
     json(conn, response)
   end
 
-  # TODO: make generic
-  def user_count() do
-    # {:ok, users} = MoodleNet.Users.many(preset: :actor, peer: :not_nil)
-    # length(users)
-  end
-
   def raw_nodeinfo(data) do
     %{
       version: "2.0",
@@ -41,7 +35,7 @@ defmodule NodeinfoWeb.NodeinfoController do
       # currently have no good way to get total post count
       usage: %{
         users: %{
-          total: user_count()
+          total: data.user_count
         }
       },
       metadata: %{
