@@ -3,11 +3,15 @@ defmodule Nodeinfo.Adapter do
   Contract for Nodeinfo module adapters
   """
 
-  @adapter Application.get_env(:nodeinfo, :adapter)
-
   @callback base_url() :: String.t()
-  defdelegate base_url(), to: @adapter
+  def base_url() do
+    adapter = Application.get_env(:nodeinfo, :adapter)
+    adapter.base_url()
+  end
 
   @callback gather_nodeinfo_data() :: Nodeinfo.t()
-  defdelegate gather_nodeinfo_data(), to: @adapter
+  def gather_nodeinfo_data() do
+    adapter = Application.get_env(:nodeinfo, :adapter)
+    adapter.gather_nodeinfo_data()
+  end
 end
