@@ -23,8 +23,8 @@ defmodule NodeinfoWeb.NodeinfoController do
     %{
       version: "2.0",
       software: %{
-        name: data.name |> String.downcase(),
-        version: data.version
+        name: data.app_name |> String.downcase(),
+        version: data.app_version
       },
       protocols: ["activitypub"],
       services: %{
@@ -64,7 +64,7 @@ defmodule NodeinfoWeb.NodeinfoController do
     updated_software =
       raw_response
       |> Map.get(:software)
-      |> Map.put(:repository, data.repository)
+      |> Map.put(:repository, data.app_repository)
 
     response =
       raw_response
