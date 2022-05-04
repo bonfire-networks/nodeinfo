@@ -22,7 +22,7 @@ defmodule NodeinfoWeb.ConnCase do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import NodeinfoWeb.ConnCase
+      import NodeinfoWeb.ConnCase, async: true
 
       alias NodeinfoWeb.Router.Helpers, as: Routes
     end
