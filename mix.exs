@@ -32,7 +32,7 @@ defmodule Nodeinfo.MixProject do
     [
       {:phoenix, "~> 1.6.6"},
       {:postgrex, ">= 0.0.0"},
-      {:phoenix_live_dashboard, "~> 0.2"},
+      # {:phoenix_live_dashboard, "~> 0.2"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"}
