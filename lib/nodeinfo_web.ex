@@ -10,9 +10,10 @@ defmodule NodeinfoWeb do
 
   def view do
     quote do
-      use Phoenix.View,
-        root: "lib/nodeinfo_web/templates",
-        namespace: NodeinfoWeb
+      # use Phoenix.View,
+      #   root: "lib/nodeinfo_web/templates",
+      #   namespace: NodeinfoWeb
+      use Phoenix.Component
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -42,7 +43,7 @@ defmodule NodeinfoWeb do
   defp view_helpers do
     quote do
       # Import basic rendering functionality (render, render_layout, etc)
-      import Phoenix.View
+      # import Phoenix.View
 
       import NodeinfoWeb.ErrorHelpers
       import NodeinfoWeb.Gettext
