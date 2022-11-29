@@ -1,0 +1,9 @@
+digraph "xref graph" {
+  "lib/nodeinfo.ex"
+  "lib/nodeinfo/adapter.ex"
+  "lib/nodeinfo_web.ex"
+  "lib/nodeinfo_web/controllers/nodeinfo_controller.ex"
+  "lib/nodeinfo_web/controllers/nodeinfo_controller.ex" -> "lib/nodeinfo/adapter.ex"
+  "lib/nodeinfo_web/controllers/nodeinfo_controller.ex" -> "lib/nodeinfo_web.ex" [label="(compile)"]
+  "lib/nodeinfo_web/router.ex"
+}
