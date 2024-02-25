@@ -46,7 +46,7 @@ defmodule Nodeinfo.MixProject do
       # {:phoenix_live_dashboard, "~> 0.2"},
       {:gettext, "~> 0.19"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.6"}
     ]
   end
 
