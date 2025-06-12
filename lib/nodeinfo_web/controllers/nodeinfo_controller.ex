@@ -23,7 +23,7 @@ defmodule NodeinfoWeb.NodeinfoController do
     %{
       version: "2.0",
       software: %{
-        name: data.app_name |> String.downcase(),
+        name: normalize_app_name(data.app_name),
         version: data.app_version
       },
       protocols: ["activitypub"],
@@ -80,6 +80,14 @@ defmodule NodeinfoWeb.NodeinfoController do
   end
 
   def nodeinfo(conn, _) do
-    json(conn, %{"error" => "Nodeinfo schema version not handled"})
+    json(conn, %{"error" => "Nodeinfo schema version not handled. Try 2.0 or 2.1"})
+  end
+
+  defp normalize_app_name(app_name) do
+    app_name
+    |> String.downcase()
+    |> String.replace(~r/[^a-z0-9-]/, "-")
+    |> String.replace(~r/-+/, "-")
+    |> String.trim("-")
   end
 end
