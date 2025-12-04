@@ -13,6 +13,8 @@ defmodule NodeinfoWeb.Router do
 
       scope "/", NodeinfoWeb do
         get("/.well-known/nodeinfo/:version", NodeinfoController, :nodeinfo)
+        # Alias route for clients that expect /nodeinfo/:version
+        get("/nodeinfo/:version", NodeinfoController, :nodeinfo)
       end
     end
   end
